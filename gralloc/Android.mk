@@ -25,7 +25,7 @@ LOCAL_C_INCLUDES              += external/libcxx/include \
                                  $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_SHARED_LIBRARIES        += libion
 endif
-LOCAL_HEADER_LIBRARIES        := display_headers
+LOCAL_HEADER_LIBRARIES        := display_headers generated_kernel_headers
 ifneq ($(TARGET_KERNEL_VERSION), $(filter $(TARGET_KERNEL_VERSION),4.14 4.19))
 LOCAL_CFLAGS                  += -isystem  $(kernel_includes)
 endif
